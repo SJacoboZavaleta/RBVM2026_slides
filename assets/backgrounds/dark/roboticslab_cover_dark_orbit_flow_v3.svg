@@ -1,0 +1,107 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#07161D"/>
+      <stop offset="35%" stop-color="#0A2A36"/>
+      <stop offset="70%" stop-color="#0E5664"/>
+      <stop offset="100%" stop-color="#126E7A"/>
+    </linearGradient>
+
+    <radialGradient id="leftVignette" cx="12%" cy="50%" r="72%">
+      <stop offset="0%" stop-color="#031017" stop-opacity="0.22"/>
+      <stop offset="55%" stop-color="#031017" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#031017" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="rightGlow" cx="84%" cy="45%" r="42%">
+      <stop offset="0%" stop-color="#7FD8DA" stop-opacity="0.18"/>
+      <stop offset="58%" stop-color="#31ADAB" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#31ADAB" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <path id="orbitPath" d="M0 -166 A166 166 0 1 1 0 166 A166 166 0 1 1 0 -166"/>
+    <path id="wavePath" d="M78 566 C235 544 364 492 482 492 C600 492 635 572 748 572 C866 572 928 472 1038 472 C1148 472 1204 518 1286 548"/>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#leftVignette)"/>
+  <rect width="1280" height="720" fill="url(#rightGlow)"/>
+
+  <!-- subtle structure lines, no hard rectangle -->
+  <g opacity="0.10" stroke="#9ADFE0" fill="none">
+    <path d="M0 84 H420"/>
+    <path d="M0 636 H360"/>
+  </g>
+
+  <!-- orbital composition on the right -->
+  <g transform="translate(1096 334)" opacity="0.80">
+    <circle r="166" fill="none" stroke="#74D7D9" stroke-width="1.7" opacity="0.92"/>
+    <circle r="120" fill="none" stroke="#D7F3F2" stroke-width="1" opacity="0.18"/>
+    <circle r="184" fill="none" stroke="#74D7D9" stroke-width="0.8" stroke-dasharray="2 6" opacity="0.18"/>
+
+    <circle cx="-166" cy="0" r="5" fill="#D9ECEE" opacity="0.40"/>
+    <circle cx="128" cy="-5" r="4" fill="#74D7D9" opacity="0.84"/>
+    <circle r="4" fill="#7FE3E1" opacity="0.90"/>
+
+    <circle r="9" fill="#7FE3E1" opacity="0.07">
+      <animate attributeName="r" values="9;13;9" dur="4.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.04;0.14;0.04" dur="4.2s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle r="7" fill="#86E6E4" filter="url(#glow)">
+      <animateMotion dur="17s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#orbitPath"/>
+      </animateMotion>
+    </circle>
+  </g>
+
+  <!-- flowing line from left to right -->
+  <g fill="none" stroke="#86DEDE" stroke-width="1.8" opacity="0.52">
+    <use href="#wavePath"/>
+    <path d="M730 572 C900 572 1040 572 1186 572" stroke-dasharray="4 9" opacity="0.16"/>
+  </g>
+
+  <circle r="6.8" fill="#74D7D9" filter="url(#glow)">
+    <animateMotion dur="12.8s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#wavePath"/>
+    </animateMotion>
+  </circle>
+
+  <!-- light signal hints -->
+  <g transform="translate(1136 614)" opacity="0.82">
+    <path d="M0 0 h118" stroke="#8FE1E0" stroke-width="1.1" stroke-dasharray="8 8" fill="none" opacity="0.26"/>
+    <g fill="#E8C45C">
+      <path d="M82 0 l6 -4 v8z">
+        <animateTransform attributeName="transform" type="translate" values="0 0;18 0;0 0" dur="2.8s" repeatCount="indefinite"/>
+      </path>
+      <path d="M94 0 l6 -4 v8z">
+        <animateTransform attributeName="transform" type="translate" values="0 0;18 0;0 0" dur="2.8s" begin="0.24s" repeatCount="indefinite"/>
+      </path>
+      <path d="M106 0 l6 -4 v8z">
+        <animateTransform attributeName="transform" type="translate" values="0 0;18 0;0 0" dur="2.8s" begin="0.48s" repeatCount="indefinite"/>
+      </path>
+    </g>
+  </g>
+
+  <g stroke="#8BDDDD" fill="none" opacity="0.15">
+    <path d="M1114 92 L1260 92"/>
+    <path d="M1090 114 L1260 114"/>
+  </g>
+
+  <g fill="#79DADD" opacity="0.82">
+    <circle cx="1222" cy="150" r="2.5"><animate attributeName="opacity" values="0.18;0.82;0.18" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="1222" cy="172" r="2.5"><animate attributeName="opacity" values="0.82;0.18;0.82" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="1222" cy="194" r="2.5"><animate attributeName="opacity" values="0.18;0.82;0.18" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="1222" cy="538" r="2.5"><animate attributeName="opacity" values="0.82;0.18;0.82" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="1222" cy="560" r="2.5"><animate attributeName="opacity" values="0.18;0.82;0.18" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="1222" cy="582" r="2.5"><animate attributeName="opacity" values="0.82;0.18;0.82" dur="4s" repeatCount="indefinite"/></circle>
+  </g>
+</svg>

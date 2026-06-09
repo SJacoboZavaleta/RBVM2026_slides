@@ -1,0 +1,32 @@
+Plantilla de proyecto reutilizable
+
+Copyright (c) 2026 Sergio Jácobo-Zavaleta
+
+Este repositorio se proporciona como referencia de la estructura y la
+plantilla de una presentación en Quarto/R. El propósito de esta licencia es
+permitir la reutilización de la forma del proyecto, la configuración y los
+archivos de plantilla.
+
+Queda expresamente excluido el uso, la copia o la reutilización del contenido
+específico de la presentación (texto, figuras, resultados, datos o ideas
+publicadas) sin la autorización correspondiente. El material del trabajo ya
+está publicado y no está licenciado para reproducción ni distribución de su
+contenido original.
+
+Puedes reutilizar:
+- la estructura del proyecto
+- el archivo `RBVM2026.qmd` como modelo de formato
+- la configuración de `_quarto.yml`
+- los patrones de organización de carpetas y recursos
+
+No puedes reutilizar:
+- texto y gráficos específicos de la presentación
+- datos, resultados o contenido científico original
+- imágenes y figuras publicadas sin permiso
+
+Uso permitido:
+- copiar la estructura del proyecto para crear otra presentación
+- adaptar los estilos y la configuración de Quarto/R a tus propios datos
+
+Este documento no es una licencia estándar de software, sino una nota de uso
+que aclara el alcance de la reutilización del repositorio.

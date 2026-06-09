@@ -1,0 +1,63 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#07141A"/>
+      <stop offset="46%" stop-color="#0A2C37"/>
+      <stop offset="100%" stop-color="#0F5F6B"/>
+    </linearGradient>
+    <radialGradient id="wash" cx="84%" cy="40%" r="38%">
+      <stop offset="0%" stop-color="#31ADAB" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#31ADAB" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="3.8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <path id="forward" d="M802 292 H954 H1110"/>
+    <path id="feedback" d="M1110 292 V500 H890 V560 H778 V316"/>
+    <path id="setpoint" d="M720 232 C758 216 794 216 832 232 C870 248 906 248 944 232"/>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#wash)"/>
+
+  <!-- keep left zone clean for title/authors -->
+  <rect x="0" y="0" width="700" height="720" fill="#041118" opacity="0.025"/>
+
+  <!-- tiny reference cue -->
+  <path d="M720 232 C758 216 794 216 832 232 C870 248 906 248 944 232" fill="none" stroke="#8ADDDD" stroke-width="1.4" opacity="0.24"/>
+  <circle r="4.4" fill="#7BDDDD" filter="url(#glow)">
+    <animateMotion dur="6.2s" repeatCount="indefinite"><mpath href="#setpoint"/></animateMotion>
+  </circle>
+
+  <!-- minimal closed loop on the right -->
+  <g fill="#0F3A45" opacity="0.66" stroke="#8ADDDD" stroke-opacity="0.26">
+    <circle cx="778" cy="292" r="16"/>
+    <rect x="954" y="264" width="106" height="56" rx="16"/>
+    <circle cx="1110" cy="292" r="16"/>
+    <rect x="890" y="534" width="110" height="52" rx="16"/>
+  </g>
+
+  <g fill="none" stroke="#8ADDDD" stroke-width="1.9" opacity="0.46">
+    <path d="M794 292 H954"/>
+    <path d="M1060 292 H1094"/>
+    <path d="M1110 292 V500 H944 V534"/>
+    <path d="M890 560 H778 V308"/>
+  </g>
+
+  <g stroke="#DDEFEF" stroke-width="1.2" opacity="0.30">
+    <path d="M768 292 H788"/>
+    <path d="M778 282 V302"/>
+    <path d="M1102 292 H1118"/>
+  </g>
+
+  <circle r="6.0" fill="#7BDDDD" filter="url(#glow)">
+    <animateMotion dur="9.2s" repeatCount="indefinite"><mpath href="#forward"/></animateMotion>
+  </circle>
+  <circle r="5.0" fill="#E7C25E" filter="url(#glow)">
+    <animateMotion dur="7.1s" begin="0.9s" repeatCount="indefinite"><mpath href="#forward"/></animateMotion>
+  </circle>
+  <circle r="5.4" fill="#7BDDDD" filter="url(#glow)">
+    <animateMotion dur="10.6s" begin="0.7s" repeatCount="indefinite"><mpath href="#feedback"/></animateMotion>
+  </circle>
+</svg>

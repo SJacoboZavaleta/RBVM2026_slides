@@ -1,0 +1,62 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#07151B"/>
+      <stop offset="46%" stop-color="#0A2F3A"/>
+      <stop offset="100%" stop-color="#105F6C"/>
+    </linearGradient>
+    <radialGradient id="wash" cx="80%" cy="44%" r="42%">
+      <stop offset="0%" stop-color="#31ADAB" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#31ADAB" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <path id="guidePath" d="M884 574 C944 540 1002 524 1070 524 C1140 524 1206 544 1260 572"/>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#wash)"/>
+
+  <!-- minimal CAD / mechanism-like linkage on the right -->
+  <g transform="translate(1020 404)">
+    <circle cx="0" cy="0" r="18" fill="none" stroke="#8ADDDD" stroke-width="1.6" opacity="0.40"/>
+    <circle cx="0" cy="0" r="4" fill="#E0F0F1" opacity="0.40"/>
+
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="-28 0 0; 22 0 0; -28 0 0" dur="6s" repeatCount="indefinite"/>
+      <line x1="0" y1="0" x2="136" y2="-74" stroke="#8ADDDD" stroke-width="2.1" opacity="0.82"/>
+      <circle cx="136" cy="-74" r="13" fill="none" stroke="#8ADDDD" stroke-width="1.4" opacity="0.40"/>
+      <circle cx="136" cy="-74" r="4.5" fill="#7FD8DA" filter="url(#glow)"/>
+    </g>
+
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="16 0 0; -18 0 0; 16 0 0" dur="6s" repeatCount="indefinite"/>
+      <line x1="0" y1="0" x2="148" y2="92" stroke="#8ADDDD" stroke-width="2.1" opacity="0.62"/>
+      <circle cx="148" cy="92" r="13" fill="none" stroke="#8ADDDD" stroke-width="1.4" opacity="0.34"/>
+      <circle cx="148" cy="92" r="4.5" fill="#E7C25E" filter="url(#glow)"/>
+    </g>
+  </g>
+
+  <!-- slider rail -->
+  <g>
+    <line x1="1156" y1="328" x2="1254" y2="328" stroke="#DCEEEF" stroke-width="1.4" opacity="0.22"/>
+    <rect x="1190" y="316" width="40" height="24" rx="6" fill="#0F3C47" opacity="0.74" stroke="#8ADDDD" stroke-opacity="0.24">
+      <animate attributeName="x" values="1184;1216;1184" dur="6s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- construction lines -->
+  <g stroke="#8CDDDD" fill="none" opacity="0.16">
+    <circle cx="1020" cy="404" r="116"/>
+    <path d="M884 404 H1248"/>
+    <path d="M1020 238 V570"/>
+  </g>
+
+  <!-- tiny moving indicator along guide -->
+  <path d="M884 574 C944 540 1002 524 1070 524 C1140 524 1206 544 1260 572" fill="none" stroke="#8ADDDD" stroke-width="1.5" opacity="0.28"/>
+  <circle r="5.8" fill="#7DDDDD" filter="url(#glow)">
+    <animateMotion dur="8.6s" repeatCount="indefinite"><mpath href="#guidePath"/></animateMotion>
+  </circle>
+</svg>

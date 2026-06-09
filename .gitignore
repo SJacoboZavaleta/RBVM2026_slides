@@ -1,0 +1,20 @@
+.Rhistory
+.RData
+.Rproj.user/
+.Ruserdata
+.Rplots.pdf
+
+.quarto/
+_quarto.yml
+*_cache/
+*.utf8.md
+*.knit.md
+*_files/
+
+backup/
+
+# Optional editor files
+*.swp
+*~
+.DS_Store
+Thumbs.db

@@ -1,0 +1,56 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#08161C"/>
+      <stop offset="52%" stop-color="#0A3340"/>
+      <stop offset="100%" stop-color="#0F6370"/>
+    </linearGradient>
+    <radialGradient id="wash" cx="80%" cy="40%" r="44%">
+      <stop offset="0%" stop-color="#31ADAB" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#31ADAB" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cableStroke" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6ED8D9"/>
+      <stop offset="80%" stop-color="#8AE1E0"/>
+      <stop offset="100%" stop-color="#D9C060"/>
+    </linearGradient>
+    <path id="cableA" d="M65 582 C210 582 310 582 430 532 C524 493 612 398 715 398 C794 398 850 446 928 446 C1028 446 1110 370 1218 370"/>
+    <path id="cableB" d="M65 626 C232 626 346 626 474 584 C584 548 636 484 746 484 C832 484 896 520 972 520 C1092 520 1160 476 1220 430"/>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#wash)"/>
+  <rect width="1280" height="720" fill="#04131A" opacity="0.16"/>
+
+  <g fill="none" stroke-width="2" opacity="0.76">
+    <path d="M65 582 C210 582 310 582 430 532 C524 493 612 398 715 398 C794 398 850 446 928 446 C1028 446 1110 370 1218 370" stroke="url(#cableStroke)"/>
+    <path d="M65 626 C232 626 346 626 474 584 C584 548 636 484 746 484 C832 484 896 520 972 520 C1092 520 1160 476 1220 430" stroke="#74D9D9" opacity="0.48"/>
+  </g>
+  <path d="M820 398 h105" stroke="#D8C565" stroke-width="1.2" stroke-dasharray="5 7" opacity="0.35" fill="none"/>
+  <path d="M1010 520 h110" stroke="#D8C565" stroke-width="1.2" stroke-dasharray="5 7" opacity="0.35" fill="none"/>
+
+  <!-- energetic pulses like current through SMA / cable -->
+  <circle r="7.5" fill="#83E5E3" filter="url(#glow)">
+    <animateMotion dur="7.5s" repeatCount="indefinite" rotate="auto"><mpath href="#cableA"/></animateMotion>
+  </circle>
+  <circle r="5.8" fill="#E9C65E" filter="url(#glow)">
+    <animateMotion dur="5.8s" begin="0.6s" repeatCount="indefinite" rotate="auto"><mpath href="#cableA"/></animateMotion>
+  </circle>
+  <circle r="6.8" fill="#7ADDDD" filter="url(#glow)">
+    <animateMotion dur="8.2s" begin="1.1s" repeatCount="indefinite" rotate="auto"><mpath href="#cableB"/></animateMotion>
+  </circle>
+  <circle r="5.4" fill="#DCC466" filter="url(#glow)">
+    <animateMotion dur="6.6s" begin="1.8s" repeatCount="indefinite" rotate="auto"><mpath href="#cableB"/></animateMotion>
+  </circle>
+
+  <g opacity="0.52" fill="none" stroke="#8ADDDD" stroke-width="1.2">
+    <path d="M1020 170 h190"/>
+    <path d="M1055 192 h155" opacity="0.42"/>
+    <path d="M948 324 C1020 324 1062 286 1110 286" opacity="0.24"/>
+  </g>
+  <g fill="#7BDDDD" opacity="0.84">
+    <circle cx="1215" cy="162" r="2.4"><animate attributeName="opacity" values="0.18;0.84;0.18" dur="3.8s" repeatCount="indefinite"/></circle>
+    <circle cx="1215" cy="184" r="2.4"><animate attributeName="opacity" values="0.84;0.18;0.84" dur="3.8s" repeatCount="indefinite"/></circle>
+    <circle cx="1215" cy="206" r="2.4"><animate attributeName="opacity" values="0.18;0.84;0.18" dur="3.8s" repeatCount="indefinite"/></circle>
+  </g>
+</svg>

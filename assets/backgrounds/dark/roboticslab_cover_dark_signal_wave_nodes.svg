@@ -1,0 +1,66 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#07161C"/>
+      <stop offset="46%" stop-color="#0A2F3A"/>
+      <stop offset="100%" stop-color="#115F6D"/>
+    </linearGradient>
+    <radialGradient id="wash" cx="82%" cy="42%" r="42%">
+      <stop offset="0%" stop-color="#31ADAB" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#31ADAB" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <path id="wave1" d="M60 466 C170 420 278 420 388 466 C498 512 608 512 718 466 C828 420 938 420 1048 466 C1138 504 1212 504 1280 476"/>
+    <path id="wave2" d="M92 562 C210 520 308 520 414 562 C520 604 634 604 742 562 C850 520 958 520 1066 562 C1146 592 1212 592 1280 570"/>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#wash)"/>
+
+  <g fill="none" stroke="#89DEDE" stroke-width="1.8" opacity="0.48">
+    <use href="#wave1"/>
+    <use href="#wave2" opacity="0.34"/>
+  </g>
+
+  <g fill="#E0F0F1" opacity="0.26">
+    <circle cx="388" cy="466" r="7"/><circle cx="718" cy="466" r="7"/><circle cx="1048" cy="466" r="7"/>
+    <circle cx="414" cy="562" r="7"/><circle cx="742" cy="562" r="7"/><circle cx="1066" cy="562" r="7"/>
+  </g>
+  <g fill="#7FD8DA" opacity="0.86">
+    <circle cx="388" cy="466" r="3"/>
+    <circle cx="718" cy="466" r="3"/>
+    <circle cx="1048" cy="466" r="3"/>
+    <circle cx="414" cy="562" r="3"/>
+    <circle cx="742" cy="562" r="3"/>
+    <circle cx="1066" cy="562" r="3"/>
+  </g>
+
+  <!-- moving signal pulses -->
+  <circle r="6.6" fill="#7DDDDD" filter="url(#glow)">
+    <animateMotion dur="8.8s" repeatCount="indefinite"><mpath href="#wave1"/></animateMotion>
+  </circle>
+  <circle r="5.4" fill="#E7C25E" filter="url(#glow)">
+    <animateMotion dur="6.8s" begin="1.1s" repeatCount="indefinite"><mpath href="#wave1"/></animateMotion>
+  </circle>
+  <circle r="6.2" fill="#7DDDDD" filter="url(#glow)">
+    <animateMotion dur="9.6s" begin="0.7s" repeatCount="indefinite"><mpath href="#wave2"/></animateMotion>
+  </circle>
+  <circle r="5.0" fill="#E7C25E" filter="url(#glow)">
+    <animateMotion dur="7.6s" begin="1.9s" repeatCount="indefinite"><mpath href="#wave2"/></animateMotion>
+  </circle>
+
+  <!-- node breathing -->
+  <g fill="#7FD8DA" opacity="0.10">
+    <circle cx="718" cy="466" r="10">
+      <animate attributeName="r" values="10;16;10" dur="4.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.08;0.18;0.08" dur="4.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="742" cy="562" r="10">
+      <animate attributeName="r" values="10;16;10" dur="4.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.08;0.16;0.08" dur="4.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

@@ -1,0 +1,50 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#07141A"/>
+      <stop offset="48%" stop-color="#0A2D38"/>
+      <stop offset="100%" stop-color="#105F6B"/>
+    </linearGradient>
+    <radialGradient id="wash" cx="82%" cy="42%" r="38%">
+      <stop offset="0%" stop-color="#31ADAB" stop-opacity="0.13"/>
+      <stop offset="100%" stop-color="#31ADAB" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="3.8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <path id="loop" d="M824 262 H1088 V418 H956 V546 H792 V438 H736 V318 H824"/>
+    <path id="ref" d="M730 202 C776 184 820 184 866 202"/>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#wash)"/>
+
+  <rect x="0" y="0" width="700" height="720" fill="#041118" opacity="0.025"/>
+
+  <path d="M730 202 C776 184 820 184 866 202" fill="none" stroke="#8ADDDD" stroke-width="1.4" opacity="0.20"/>
+  <circle r="4.4" fill="#7BDDDD" filter="url(#glow)">
+    <animateMotion dur="5.9s" repeatCount="indefinite"><mpath href="#ref"/></animateMotion>
+  </circle>
+
+  <g fill="#0F3A45" opacity="0.65" stroke="#8ADDDD" stroke-opacity="0.24">
+    <rect x="860" y="236" width="114" height="52" rx="16"/>
+    <rect x="980" y="392" width="108" height="52" rx="16"/>
+    <rect x="820" y="520" width="108" height="52" rx="16"/>
+    <circle cx="736" cy="318" r="14"/>
+  </g>
+
+  <g fill="none" stroke="#8ADDDD" stroke-width="1.9" opacity="0.44">
+    <path d="M824 262 H1088 V418 H956 V546 H792 V438 H736 V318 H824"/>
+  </g>
+
+  <circle r="6.1" fill="#7BDDDD" filter="url(#glow)">
+    <animateMotion dur="11.2s" repeatCount="indefinite"><mpath href="#loop"/></animateMotion>
+  </circle>
+  <circle r="5.0" fill="#E7C25E" filter="url(#glow)">
+    <animateMotion dur="8.4s" begin="1.2s" repeatCount="indefinite"><mpath href="#loop"/></animateMotion>
+  </circle>
+  <circle r="4.7" fill="#7BDDDD" filter="url(#glow)">
+    <animateMotion dur="6.3s" begin="2.1s" repeatCount="indefinite"><mpath href="#loop"/></animateMotion>
+  </circle>
+</svg>

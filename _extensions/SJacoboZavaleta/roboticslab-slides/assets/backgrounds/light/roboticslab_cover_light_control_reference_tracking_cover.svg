@@ -1,0 +1,73 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F7FAFA"/>
+      <stop offset="100%" stop-color="#E6F2F3"/>
+    </linearGradient>
+    <radialGradient id="washR" cx="84%" cy="42%" r="40%">
+      <stop offset="0%" stop-color="#31ADAB" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#31ADAB" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="3.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <path id="fw1" d="M740 224 H858 H992 H1124"/>
+    <path id="fw2" d="M740 384 H882 H1018 H1160"/>
+    <path id="fb1" d="M1124 224 V540 H860 V596 H714"/>
+    <path id="fb2" d="M1160 384 V620 H924 V654 H744"/>
+    <path id="refwave" d="M650 146 C700 124 748 124 798 146 C848 168 896 168 946 146"/>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#washR)"/>
+
+  <path d="M650 146 C700 124 748 124 798 146 C848 168 896 168 946 146" fill="none" stroke="#0E5962" stroke-width="1.6" opacity="0.46"/>
+  <circle r="4.8" fill="#0C6770" filter="url(#glow)">
+    <animateMotion dur="6.8s" repeatCount="indefinite"><mpath href="#refwave"/></animateMotion>
+  </circle>
+
+  <g fill="#DDEEEF" opacity="0.82" stroke="#12454C" stroke-opacity="0.34">
+    <circle cx="740" cy="224" r="16"/>
+    <rect x="858" y="196" width="96" height="56" rx="14"/>
+    <rect x="992" y="196" width="96" height="56" rx="14"/>
+    <circle cx="1124" cy="224" r="16"/>
+    <circle cx="740" cy="384" r="16"/>
+    <rect x="882" y="356" width="96" height="56" rx="14"/>
+    <rect x="1018" y="356" width="96" height="56" rx="14"/>
+    <circle cx="1160" cy="384" r="16"/>
+    <rect x="860" y="570" width="116" height="52" rx="14"/>
+    <rect x="924" y="628" width="116" height="52" rx="14"/>
+  </g>
+
+  <g fill="none" stroke="#0F5961" stroke-width="2" opacity="0.74">
+    <path d="M740 224 H858"/>
+    <path d="M954 224 H992"/>
+    <path d="M1088 224 H1108"/>
+    <path d="M740 384 H882"/>
+    <path d="M978 384 H1018"/>
+    <path d="M1114 384 H1144"/>
+    <path d="M1124 224 V540 H918 V570"/>
+    <path d="M1160 384 V620 H982 V628"/>
+    <path d="M860 596 H714"/>
+    <path d="M924 654 H744"/>
+  </g>
+
+  <circle r="5.8" fill="#0D6870" filter="url(#glow)">
+    <animateMotion dur="8.8s" repeatCount="indefinite"><mpath href="#fw1"/></animateMotion>
+  </circle>
+  <circle r="5.0" fill="#C79B19" filter="url(#glow)">
+    <animateMotion dur="7.0s" begin="0.9s" repeatCount="indefinite"><mpath href="#fw1"/></animateMotion>
+  </circle>
+  <circle r="5.8" fill="#0D6870" filter="url(#glow)">
+    <animateMotion dur="9.8s" begin="0.5s" repeatCount="indefinite"><mpath href="#fw2"/></animateMotion>
+  </circle>
+  <circle r="5.0" fill="#C79B19" filter="url(#glow)">
+    <animateMotion dur="8.0s" begin="1.6s" repeatCount="indefinite"><mpath href="#fw2"/></animateMotion>
+  </circle>
+  <circle r="5.2" fill="#0D6870" filter="url(#glow)">
+    <animateMotion dur="10.8s" begin="0.7s" repeatCount="indefinite"><mpath href="#fb1"/></animateMotion>
+  </circle>
+  <circle r="5.2" fill="#0D6870" filter="url(#glow)">
+    <animateMotion dur="11.2s" begin="1.4s" repeatCount="indefinite"><mpath href="#fb2"/></animateMotion>
+  </circle>
+</svg>

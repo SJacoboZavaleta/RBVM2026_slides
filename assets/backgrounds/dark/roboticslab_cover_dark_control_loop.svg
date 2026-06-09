@@ -1,0 +1,66 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#08141A"/>
+      <stop offset="46%" stop-color="#0A303B"/>
+      <stop offset="100%" stop-color="#105E6C"/>
+    </linearGradient>
+    <radialGradient id="wash" cx="82%" cy="42%" r="40%">
+      <stop offset="0%" stop-color="#31ADAB" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#31ADAB" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <path id="loopPath" d="M790 238 H1130 V356 H1210 V520 H948 V604 H758 V456 H678 V304 H790"/>
+    <path id="feedbackPath" d="M758 604 C700 570 672 520 672 456 C672 382 716 332 790 304"/>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#wash)"/>
+
+  <!-- abstract blocks of a control loop -->
+  <g>
+    <rect x="808" y="212" width="142" height="52" rx="12" fill="#0F3C47" opacity="0.64" stroke="#8ADDDD" stroke-opacity="0.28"/>
+    <rect x="1010" y="212" width="146" height="52" rx="12" fill="#0F3C47" opacity="0.64" stroke="#8ADDDD" stroke-opacity="0.28"/>
+    <rect x="1164" y="330" width="70" height="52" rx="12" fill="#0F3C47" opacity="0.64" stroke="#8ADDDD" stroke-opacity="0.28"/>
+    <rect x="972" y="494" width="146" height="52" rx="12" fill="#0F3C47" opacity="0.64" stroke="#8ADDDD" stroke-opacity="0.28"/>
+    <rect x="758" y="494" width="146" height="52" rx="12" fill="#0F3C47" opacity="0.64" stroke="#8ADDDD" stroke-opacity="0.28"/>
+    <rect x="646" y="382" width="70" height="52" rx="12" fill="#0F3C47" opacity="0.64" stroke="#8ADDDD" stroke-opacity="0.28"/>
+  </g>
+
+  <g fill="none" stroke="#8ADDDD" stroke-width="1.7" opacity="0.46">
+    <use href="#loopPath"/>
+    <use href="#feedbackPath"/>
+  </g>
+
+  <g fill="#E2F1F2" opacity="0.34">
+    <circle cx="790" cy="238" r="6"/><circle cx="1130" cy="238" r="6"/>
+    <circle cx="1210" cy="356" r="6"/><circle cx="1210" cy="520" r="6"/>
+    <circle cx="948" cy="604" r="6"/><circle cx="758" cy="604" r="6"/>
+    <circle cx="678" cy="456" r="6"/><circle cx="678" cy="304" r="6"/>
+    <circle cx="790" cy="304" r="6"/>
+  </g>
+
+  <!-- loop circulation -->
+  <circle r="6.4" fill="#7DDDDD" filter="url(#glow)">
+    <animateMotion dur="11.5s" repeatCount="indefinite"><mpath href="#loopPath"/></animateMotion>
+  </circle>
+  <circle r="5.3" fill="#E7C25E" filter="url(#glow)">
+    <animateMotion dur="9.2s" begin="1.4s" repeatCount="indefinite"><mpath href="#loopPath"/></animateMotion>
+  </circle>
+  <circle r="5.5" fill="#7DDDDD" filter="url(#glow)">
+    <animateMotion dur="6.8s" begin="0.8s" repeatCount="indefinite"><mpath href="#feedbackPath"/></animateMotion>
+  </circle>
+
+  <!-- small scanning bars -->
+  <g transform="translate(1098 642)" opacity="0.78">
+    <path d="M0 0 h112" stroke="#8FE1E0" stroke-width="1.1" stroke-dasharray="8 8" fill="none" opacity="0.26"/>
+    <g fill="#E8C45C">
+      <path d="M72 0 l6 -4 v8z"><animateTransform attributeName="transform" type="translate" values="0 0;18 0;0 0" dur="2.8s" repeatCount="indefinite"/></path>
+      <path d="M84 0 l6 -4 v8z"><animateTransform attributeName="transform" type="translate" values="0 0;18 0;0 0" dur="2.8s" begin="0.24s" repeatCount="indefinite"/></path>
+      <path d="M96 0 l6 -4 v8z"><animateTransform attributeName="transform" type="translate" values="0 0;18 0;0 0" dur="2.8s" begin="0.48s" repeatCount="indefinite"/></path>
+    </g>
+  </g>
+</svg>

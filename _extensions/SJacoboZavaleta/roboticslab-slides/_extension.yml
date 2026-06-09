@@ -1,0 +1,32 @@
+title: Roboticslab-slides
+author: Sergio Jacobo Zavaleta
+version: 1.0.1
+quarto-required: ">=1.4.0"
+
+contributes:
+  formats:
+    revealjs:
+      theme: [dark, custom.scss]
+      logo: assets/logos/Roboticslab.svg
+
+      width: 1280
+      height: 720
+
+      # Robust slide grammar:
+      #   ## = slide
+      #   #  = optional high-level section if you decide to use it later
+      slide-level: 2
+
+      # This is the key option for a manual cover slide.
+      # It prevents Quarto from creating an automatic title slide before ## Cover.
+      title-slide: false
+      center: false
+      center-title-slide: false
+
+      # If you later use # sections, left/right still moves linearly through all slides.
+      navigation-mode: linear
+
+      slide-number: true
+      code-line-numbers: false
+      transition: fade
+      background-transition: fade

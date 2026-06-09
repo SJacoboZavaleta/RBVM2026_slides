@@ -1,0 +1,62 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="glow" cx="78%" cy="48%" r="48%">
+      <stop offset="0%" stop-color="#31ADAB" stop-opacity="0.42"/>
+      <stop offset="42%" stop-color="#1C7371" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#0B1220" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#102626" stop-opacity="0.86"/>
+      <stop offset="100%" stop-color="#0B1220" stop-opacity="0.96"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="720" fill="#0B1220"/>
+  <rect width="1280" height="720" fill="url(#glow)"/>
+
+  <path d="M0 0 H760 C640 120 590 260 640 410 C690 560 850 630 1280 720 H0 Z"
+        fill="url(#panel)" opacity="0.92"/>
+
+  <!-- Slow rotating technical orbit -->
+  <g opacity="0.48">
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="0 1030 360"
+      to="360 1030 360"
+      dur="90s"
+      repeatCount="indefinite"/>
+
+    <circle cx="1030" cy="360" r="212" fill="none" stroke="#31ADAB" stroke-width="2"/>
+    <circle cx="1030" cy="360" r="156" fill="none" stroke="#E8F4F3" stroke-width="1" opacity="0.22"/>
+    <circle cx="1030" cy="148" r="7" fill="#31ADAB"/>
+    <circle cx="874" cy="360" r="5" fill="#E8F4F3" opacity="0.7"/>
+  </g>
+
+  <!-- Floating mechanical lines -->
+  <g opacity="0.22" stroke="#E8F4F3" stroke-width="2" fill="none">
+    <animateTransform
+      attributeName="transform"
+      type="translate"
+      values="0 0; 0 -14; 0 0"
+      dur="10s"
+      repeatCount="indefinite"/>
+
+    <path d="M870 510 C930 470 970 470 1030 510 C1080 545 1135 540 1195 490"/>
+    <path d="M910 560 C980 520 1050 525 1130 575"/>
+  </g>
+
+  <!-- Small pulsing particles -->
+  <g fill="#31ADAB">
+    <circle cx="830" cy="190" r="3">
+      <animate attributeName="opacity" values="0.25;0.9;0.25" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1160" cy="250" r="4">
+      <animate attributeName="opacity" values="0.8;0.25;0.8" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="985" cy="590" r="3">
+      <animate attributeName="opacity" values="0.2;0.75;0.2" dur="6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

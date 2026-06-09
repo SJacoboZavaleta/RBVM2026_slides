@@ -1,0 +1,50 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#08141A"/>
+      <stop offset="45%" stop-color="#0B2D39"/>
+      <stop offset="100%" stop-color="#115D69"/>
+    </linearGradient>
+    <radialGradient id="wash1" cx="16%" cy="72%" r="34%">
+      <stop offset="0%" stop-color="#31ADAB" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#31ADAB" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="wash2" cx="84%" cy="28%" r="34%">
+      <stop offset="0%" stop-color="#7FD8DA" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#7FD8DA" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-70%" y="-70%" width="240%" height="240%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <path id="leftRise" d="M118 632 C118 560 126 490 154 400 C186 304 230 224 294 142"/>
+    <path id="rightFall" d="M1138 112 C1114 180 1084 248 1040 326 C996 404 944 470 872 550"/>
+    <path id="bridge" d="M264 168 C454 108 632 108 812 180 C920 224 1000 312 1034 412"/>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#wash1)"/>
+  <rect width="1280" height="720" fill="url(#wash2)"/>
+
+  <path d="M118 632 C118 560 126 490 154 400 C186 304 230 224 294 142" fill="none" stroke="#88DEDE" stroke-width="1.8" opacity="0.60"/>
+  <path d="M1138 112 C1114 180 1084 248 1040 326 C996 404 944 470 872 550" fill="none" stroke="#88DEDE" stroke-width="1.8" opacity="0.60"/>
+  <path d="M264 168 C454 108 632 108 812 180 C920 224 1000 312 1034 412" fill="none" stroke="#DDEFEF" stroke-width="1" opacity="0.14"/>
+
+  <circle r="7" fill="#7EDDDD" filter="url(#glow)">
+    <animateMotion dur="8s" repeatCount="indefinite" rotate="auto"><mpath href="#leftRise"/></animateMotion>
+  </circle>
+  <circle r="7" fill="#7EDDDD" filter="url(#glow)">
+    <animateMotion dur="8.4s" begin="0.8s" repeatCount="indefinite" rotate="auto"><mpath href="#rightFall"/></animateMotion>
+  </circle>
+  <circle r="5.8" fill="#E7C35F" filter="url(#glow)">
+    <animateMotion dur="10.6s" begin="1.2s" repeatCount="indefinite" rotate="auto"><mpath href="#bridge"/></animateMotion>
+  </circle>
+
+  <g opacity="0.56" fill="none" stroke="#8BDDDD" stroke-width="1.3">
+    <path d="M106 598 C162 578 204 550 228 508"/>
+    <path d="M876 520 C964 478 1036 406 1088 304"/>
+  </g>
+
+  <g fill="#7FD8DA" opacity="0.78">
+    <circle cx="98" cy="650" r="2.4"><animate attributeName="opacity" values="0.16;0.82;0.16" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="98" cy="628" r="2.4"><animate attributeName="opacity" values="0.82;0.16;0.82" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="1182" cy="92" r="2.4"><animate attributeName="opacity" values="0.16;0.82;0.16" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="1182" cy="114" r="2.4"><animate attributeName="opacity" values="0.82;0.16;0.82" dur="4s" repeatCount="indefinite"/></circle>
+  </g>
+</svg>
