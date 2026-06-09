@@ -1,4 +1,4 @@
-# [RBVM2026 Slides](https://sjacobozavaleta.github.io/RBVM2026_slides/RBVM2026.html?view=print#/cover)
+# [RBVM2026 Slides](https://sjacobozavaleta.github.io/RBVM2026_slides/RBVM2026.html#/cover)
 
 Presentación en Quarto para el Simposio CEA de Robótica, Bioingeniería, Visión por Computador y Automática Marina 2026 (Bilbao, 10–12 June 2026).
 
