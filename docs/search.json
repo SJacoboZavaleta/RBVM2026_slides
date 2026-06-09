@@ -46,7 +46,7 @@
     "href": "RBVM2026.html#state-logic",
     "title": "",
     "section": "State logic",
-    "text": "State logic\nState machine (motion intention and tracking error)\n\n\n\n\n\nSupervisory flowchart\n\n\n\n\n\n\n\n\n\nConceptual plot of supervisory bands.\n\n\n\n\n\n\n\nInside the band, the system stays in IDLE and exploits free cooling."
+    "text": "State logic\nState machine (motion intention and tracking error)\n\n\n\n\n\nSupervisory flowchart\n\n\n\n\n\n\n\nConceptual plot of supervisory bands\n\n\n\n\n\nInside the band, the system stays in IDLE and exploits free cooling."
   },
   {
     "objectID": "RBVM2026.html#results",
