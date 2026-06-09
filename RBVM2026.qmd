@@ -23,9 +23,10 @@ Simposio CEA de Robótica, Bioingeniería, Visión por Computador y Automática 
 :::
 
 ::: {.rl-cover-logos}
+![](assets/logos/CEA_logo.png){.rl-logo}
 ![](assets/logos/RBVLogo.png){.rl-logo}
 ![](assets/logos/uc3m_logo.svg){.rl-logo}
-![](assets/logos/roboticslab-banner-350px.png){.rl-logo}
+<!-- ![](assets/logos/roboticslab-banner-350px.png){.rl-logo} -->
 ![](assets/logos/Logotipo_del_Ministerio_de_Universidades.svg){.rl-logo .rl-logo-wide}
 :::
 
@@ -481,11 +482,13 @@ Simposio CEA de Robótica, Bioingeniería, Visión por Computador y Automática 
 :::
 
 ::: {.rl-cover-logos}
+![](assets/logos/CEA_logo.png){.rl-logo}
 ![](assets/logos/RBVLogo.png){.rl-logo}
 ![](assets/logos/uc3m_logo.svg){.rl-logo}
-![](assets/logos/roboticslab-banner-350px.png){.rl-logo}
+<!-- ![](assets/logos/roboticslab-banner-350px.png){.rl-logo} -->
 ![](assets/logos/Logotipo_del_Ministerio_de_Universidades.svg){.rl-logo .rl-logo-wide}
 :::
+
 :::
 
 ::: {.rl-cover-main}
